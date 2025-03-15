@@ -11,7 +11,7 @@ export default function Footer(
   discount: string | number
 ) {
   return (
-    <Grid2 container m={"15px 0px 0px 12px"}>
+    <Grid2 container m={"15px 10px 0px 10px"}>
       <Grid2 size={6}>
         <Box
           sx={{

@@ -130,7 +130,11 @@ export default function FeatureShowcaseComponent() {
             >
               {feature.icon}
             </Box>
-            <Box display={"flex"} flexDirection={"column"}>
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              mt={!isExtraSmall && !isMedium && !isSmall && "0.5rem"}
+            >
               <Typography
                 variant="body1"
                 sx={{
@@ -147,6 +151,7 @@ export default function FeatureShowcaseComponent() {
                   mb: 0,
                   textAlign: "start",
                   alignItems: "center",
+                  color: theme.palette.text.primary,
                 }}
               >
                 {feature.text}
@@ -162,9 +167,10 @@ export default function FeatureShowcaseComponent() {
                     ? "0.6rem"
                     : isMedium
                     ? "0.7rem"
-                    : "0.9rem",
+                    : "0.6rem",
                   opacity: hoveredIndex === index ? 1 : 0,
                   transition: "opacity 0.3s ease-in-out",
+                  display:'flex'
                 }}
               >
                 {feature.secondaryText}
